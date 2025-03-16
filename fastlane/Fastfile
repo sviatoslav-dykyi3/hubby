@@ -10,15 +10,15 @@ platform :ios do
 
   desc "Syns signing"
   lane :signing do
-    sync_code_signing # match
+    # sync_code_signing # match
 
-    # singleton global access to information after actions run
-    mapping = Actions.lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+    # # singleton global access to information after actions run
+    # mapping = Actions.lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
 
-    # update_code_signing_settings will modify xcode project that is not good
-    update_code_signing_settings(
-      profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
-    )
+    # # update_code_signing_settings will modify xcode project that is not good
+    # update_code_signing_settings(
+    #   profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
+    # )
   end
 
   desc "Build binary"
