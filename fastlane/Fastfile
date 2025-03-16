@@ -10,7 +10,7 @@ platform :ios do
 
   desc "Syns signing"
   lane :signing do
-    # sync_code_signing # match
+    sync_code_signing # match
 
     # # singleton global access to information after actions run
     # mapping = Actions.lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
