@@ -24,6 +24,7 @@ platform :ios do
   desc "Build binary"
   lane :build do
     signing
+    build_ios_app
   end
 
   desc "Send binary to app store"
